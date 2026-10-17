@@ -1,6 +1,6 @@
-# odeck-10 layout notes: `usbc` block
+# odock-10 layout notes: `usbc` block
 
-Script: `hardware/odeck-10/layout/usbc.py`. Region (138,50)–(180,80), with a second rectangle (144,49.4)–(177,61.2)
+Script: `hardware/odock-10/layout/usbc.py`. Region (138,50)–(180,80), with a second rectangle (144,49.4)–(177,61.2)
 for the edge connectors only, because their courtyards poke about 0.5 mm past the back edge when the shell front is flush.
 Refs: all of "USB-C muxes & DP" (C501–C538, D501–D507, J501, J502, R501–R544, U501–U504), all of "PD controller"
 (C401–C422, JP401–JP403, Q401, Q402, R401–R415, TP401–TP406, U401), plus U1204, C1204, U1205, C1205, TP1204,

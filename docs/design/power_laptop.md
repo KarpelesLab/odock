@@ -1,6 +1,6 @@
-# odeck-10 — power_laptop sheet
+# odock-10 — power_laptop sheet
 
-Source: `hardware/odeck-10/sheets/power_laptop.py` (generates `power_laptop.kicad_sch`, ref_base 200, A2).
+Source: `hardware/odock-10/sheets/power_laptop.py` (generates `power_laptop.kicad_sch`, ref_base 200, A2).
 Status: second pass after the power review (`docs/review/power.md`), 2026-10-02. `build_all.py power_laptop` → `netlist verify: OK`;
 `tools/bom_check.py` → all parts on this sheet are JLC parts with stock (none consigned).
 Stock figures: JLC parts API on 2026-10-02. Datasheets used: TI SNVSCL2A (LM51770), SNOSD95C (LM7480-Q1),

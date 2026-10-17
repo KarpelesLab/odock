@@ -1,4 +1,4 @@
-# odeck-10: USB 10G hub and high-speed signal path (researched 2026-10-02)
+# odock-10: USB 10G hub and high-speed signal path (researched 2026-10-02)
 
 Stock is from the JLC parts API (JLC) and findchips (Mouser) on 2026-10-02. **V** = verified in a datasheet or
 primary source (URL given). **I** = inferred or engineering judgement.
@@ -10,7 +10,7 @@ primary source (URL given). **I** = inferred or engineering judgement.
   The datasheet is public, the chip runs from ROM (no firmware blob), and the **per-port speed/connect
   registers are documented and readable over SMBus** (AN2935). For 3× USB-A, cascade a GL3523 (Gen1) behind
   one port to host GL3224 + RTL8156BG.
-- **Correction to odeck-10.md:** **TUSB1046-DCI is a DFP (host/source-side) mux and does not fit the upstream
+- **Correction to odock-10.md:** **TUSB1046-DCI is a DFP (host/source-side) mux and does not fit the upstream
   UFP port.** For the laptop-facing UFP, use **TI TUSB1064** (sink-side, UFP_D pin assignments C/D/E, 10G + HBR3).
   **TUSB1046-DCI is the right part for the downstream DFP C port**, so we still use it, just on the other port.
 - **DP pass-through works as an AUX/HPD "wire" design.** TUSB1064 DP0/DP1 outputs go through AC caps into
@@ -201,7 +201,7 @@ Laptop C ──SSTX/RX (2 pairs, flip)──► TUSB1064 (UFP) ──SSTX/SSRX�
 ## Risks / open items
 
 - **PD controllers must support UFP_D (laptop side) and DFP_D (downstream side) DP alt mode, plus HPD GPIO
-  pass-through.** This is the real gating item (odeck-10 open question 1) and needs a second PD controller (or a
+  pass-through.** This is the real gating item (odock-10 open question 1) and needs a second PD controller (or a
   dual-port part) for the downstream C port.
 - **Hub enumeration depends on the MCU when SMBus is enabled.** Mitigate with GPIO-powered SMBus pull-ups, as
   described above. Also force the clocks on (AN2935) so the status registers stay readable while the host has the

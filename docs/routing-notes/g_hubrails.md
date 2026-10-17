@@ -1,16 +1,16 @@
 # Routing notes: hubrails region (phase g)
 
 Scripts:
-- `hardware/odeck-10/routing/g_hubrails.py`: `NETS = []`, `GROUPED = True`. Everything it draws goes into the group
+- `hardware/odock-10/routing/g_hubrails.py`: `NETS = []`, `GROUPED = True`. Everything it draws goes into the group
   `route:g_hubrails`, and only that group is replaced on a re-run.
-- `hardware/odeck-10/routing/_g_hubrails_lib.py`: a raster maze router used only by this script. The leading `_` keeps
+- `hardware/odock-10/routing/_g_hubrails_lib.py`: a raster maze router used only by this script. The leading `_` keeps
   `apply_routing.py` from running it.
 
 Region: (138, 80)–(180, 108). Copper stays inside the region plus 0.5 mm. Run time is about 13 min, almost all of it in
 the maze router.
 
 **Check (full pipeline):**
-`apply_routing.py <scratch>/odeck-10 --only a_planes,b_power,c_hs_usbc,d_hs_hub,e_hs_eth_sd,f_fanout,g_hubrails,z_stitch --drc`
+`apply_routing.py <scratch>/odock-10 --only a_planes,b_power,c_hs_usbc,d_hs_hub,e_hs_eth_sd,f_fanout,g_hubrails,z_stitch --drc`
 - **0 DRC errors** of any kind (clearance, short, width, hole, edge). The report lists only unconnected items.
 - Pours and planes stay whole. See "Pours and planes" below.
 

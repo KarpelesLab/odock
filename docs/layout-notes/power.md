@@ -1,6 +1,6 @@
-# odeck-10 layout notes: power block (Power input + Laptop power out)
+# odock-10 layout notes: power block (Power input + Laptop power out)
 
-Script: `hardware/odeck-10/layout/power.py`, 226 refs: every 1xx/2xx footprint plus U1201, C1201, TH1201, TP1201.
+Script: `hardware/odock-10/layout/power.py`, 226 refs: every 1xx/2xx footprint plus U1201, C1201, TH1201, TP1201.
 Region (100,50)–(138,108). A second REGION rectangle (y 49.5–64) only covers J101/J102, whose courtyards stick
 0.5 mm past the back edge because their mating faces sit flush with it.
 How it was made: I placed the connectors, TVS diodes, power stages and source switch by hand. Each small part

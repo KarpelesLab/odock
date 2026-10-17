@@ -1,6 +1,6 @@
 # hubrails block: placement notes and routing intent
 
-Script: `hardware/odeck-10/layout/hubrails.py`. Region: (138,80)–(180,108). It owns 161 footprints:
+Script: `hardware/odock-10/layout/hubrails.py`. Region: (138,80)–(180,108). It owns 161 footprints:
 - the USB hub sheet (C601–C641, D601–D602, R601–R633, U601–U603, Y601);
 - the Rails sheet (C301–C341, D301, L301–L303, Q301–Q303, R301–R321, U301–U305);
 - U1202, C1202, U1203, C1203, TH1202, TP1202, TP1203.

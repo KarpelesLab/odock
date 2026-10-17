@@ -1,6 +1,6 @@
-# odeck-10 — power rails sheet (`power_rails.kicad_sch`, refs 300+)
+# odock-10 — power rails sheet (`power_rails.kicad_sch`, refs 300+)
 
-Source: `hardware/odeck-10/sheets/power_rails.py` (generated, netlist-verified; second pass after
+Source: `hardware/odock-10/sheets/power_rails.py` (generated, netlist-verified; second pass after
 `docs/review/power.md`). Stock figures are from the JLC parts
 API on 2026-10-02. Re-check them before ordering.
 

@@ -5,15 +5,15 @@ are preserved; Freerouting only completes what is left. Nets can be excluded fro
 
 Run with KiCad's bundled Python:
   /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3 \
-      tools/autoroute.py hardware/odeck-10/odeck-10.kicad_pcb [--passes 100] [--out routed.kicad_pcb]
+      tools/autoroute.py hardware/odock-10/odock-10.kicad_pcb [--passes 100] [--out routed.kicad_pcb]
 
-Freerouting 2.4 needs Java 25: a portable Temurin JDK + the jar live in ~/.local/share/odeck/
+Freerouting 2.4 needs Java 25: a portable Temurin JDK + the jar live in ~/.local/share/odock/
 (override with FREEROUTING_JAR / FREEROUTING_JAVA). Analytics, GUI and API server are disabled.
 """
 import os, sys, glob, subprocess, argparse, tempfile, shutil
 import pcbnew
 
-BASE = os.path.expanduser("~/.local/share/odeck")
+BASE = os.path.expanduser("~/.local/share/odock")
 
 
 def java():

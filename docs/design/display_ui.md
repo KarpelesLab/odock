@@ -1,6 +1,6 @@
-# odeck-10 — Display & UI sheet (`display_ui.kicad_sch`, refs 1100+)
+# odock-10 — Display & UI sheet (`display_ui.kicad_sch`, refs 1100+)
 
-Source: `hardware/odeck-10/sheets/display_ui.py` (generated, netlist-verified). References:
+Source: `hardware/odock-10/sheets/display_ui.py` (generated, netlist-verified). References:
 - HS20HS072RX datasheet (Hansheng, V1.0, LCSC C5329582): sec. 3 electrical, sec. 5 outline, sec. 6 interface, sec. 8 SPI
   timing.
 - Hirose FH34SRJ catalog (2019-08): connector dimensions, recommended PCB pattern and FPC dimensions.
@@ -62,14 +62,14 @@ I2C_EXT_SDA/SCL ──────── J1102 JST SH 4-pin (Qwiic), TPD4E02B04
   - Why this part: it is the only dual-contact part with a low profile in JLC stock, so the contact side is not a risk. Other
     options: XUNPU FPC-05FB-12PH20 (C2856829, dual contact but 2.0 mm high) and JUSHUO AFC01-S12FCA-00 (C262661, 2.0 mm,
     single contact). Neither fits under the panel.
-  - Footprint `odeck:FFC-SMD_12P-P0.50_FH34SRJ-12S-0.5SH` is the EasyEDA import, corrected to the Hirose recommended pattern:
+  - Footprint `odock:FFC-SMD_12P-P0.50_FH34SRJ-12S-0.5SH` is the EasyEDA import, corrected to the Hirose recommended pattern:
     - Signal pads 0.3 × 0.8 at 0.5 mm pitch (B = 5.5). The import had 0.9 mm.
     - Tabs 0.4 × 0.8, E = 7.1 / F = 7.9. The import had 0.6 × 1.2.
     - 3.3 mm from the outer edge of the signal pads to the outer edge of the tabs. The import had 3.45.
     - Courtyard now covers the body and tabs plus 0.25 mm. F.Fab body outline and silk pin-1 dot added.
     - The signal pads are at the rear (actuator side, −Y) and the FPC opening is at +Y. **Seen from the top with the opening
       at +Y, contact 1 is at +X** (Hirose drawing; pad 1 at +2.75).
-- **Panel footprint**: `odeck:LCD_HS20HS072RX_Outline` is a mechanical outline with **no pads**, `exclude_from_pos_files`.
+- **Panel footprint**: `odock:LCD_HS20HS072RX_Outline` is a mechanical outline with **no pads**, `exclude_from_pos_files`.
   - All U1101 pins are NC in the schematic. The signals are carried by J1103, so pcbnew sees no pads without a net.
   - F.Fab shows the panel (front view, origin at the panel centre), the active area, the unfolded and folded tail, and where
     J1103 goes. Cmts.User shows the foam-tape window. Silk has corner marks for placing the panel.

@@ -1,6 +1,6 @@
-# odeck-10 — power_input sheet
+# odock-10 — power_input sheet
 
-Source: `hardware/odeck-10/sheets/power_input.py` (generates `power_input.kicad_sch`, ref_base 100, A2).
+Source: `hardware/odock-10/sheets/power_input.py` (generates `power_input.kicad_sch`, ref_base 100, A2).
 Status: second pass after the power review (`docs/review/power.md`), 2026-10-02. `build_all.py power_input` →
 `netlist verify: OK`.
 Stock figures: JLC parts API on 2026-10-02.
@@ -253,7 +253,7 @@ Approximate cost of the sheet: ≈ $21 incl. INA237 (~$1.9) and TPS26750 (~$3.2)
 3. **EEPROM update path**: RP2350 → TPS26750 I2Ct → EEPROM requires the TPS26750 host commands for I2C
    pass-through/EEPROM programming — confirm in the TPS26750 Host Interface TRM. Fallback: I2Cc test pads
    TP101/TP102 (programming jig) or an optional link from RP2350 to the I2Cc bus (would need a new global net).
-   WP is hard-tied to GND (writable); the odeck-10 plan mentions a controlled WP — not implemented, needs a net.
+   WP is hard-tied to GND (writable); the odock-10 plan mentions a controlled WP — not implemented, needs a net.
 4. **PP5V tied to GND** — confirm with TI (E2E) for a sink-only TPS26750.
 5. **TPS26750 I2C address 0x21** on I2C_PD: check against the PMG1-S3 address chosen on pd_pmg1.
 6. **PJ-063BH footprint** (easyeda import): pad spacing (hole → MS 2.0 mm, hole → pin 2 3.0 mm, pin 2 → pin 1

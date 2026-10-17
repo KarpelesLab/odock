@@ -1,6 +1,6 @@
-# odeck-10 layout notes — right block (Ethernet, MCU, Display & UI, sensors U1206–U1208)
+# odock-10 layout notes — right block (Ethernet, MCU, Display & UI, sensors U1206–U1208)
 
-Script: `hardware/odeck-10/layout/right.py` (187 refs: ethernet 8xx, mcu 10xx, display_ui 11xx, U/C1206–1208,
+Script: `hardware/odock-10/layout/right.py` (187 refs: ethernet 8xx, mcu 10xx, display_ui 11xx, U/C1206–1208,
 TP1207). Board 130 × 89 mm: front edge y = 139, H4 at (226,135).
 Region: (180,50)–(230,121.5) and (198,50)–(230,139). The corner (180,121.5)–(198,139.5) is kept free on top for the
 microSD socket J902. Two overhang rectangles cover parts that stick out past the board edge (the J801 courtyard at

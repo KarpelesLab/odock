@@ -1,9 +1,9 @@
 # Design review — USB-C / PD sheets (pd_pmg1, usbc_muxes)
 
-Reviewer: independent pre-layout review, 2026-10-02. Scope: `hardware/odeck-10/sheets/pd_pmg1.py`,
-`hardware/odeck-10/sheets/usbc_muxes.py`, plus the nets they share with `power_laptop.py`, `usb_hub.py`, `mcu.py`
+Reviewer: independent pre-layout review, 2026-10-02. Scope: `hardware/odock-10/sheets/pd_pmg1.py`,
+`hardware/odock-10/sheets/usbc_muxes.py`, plus the nets they share with `power_laptop.py`, `usb_hub.py`, `mcu.py`
 and `tools/schgen/nets.py`. The pin→net maps in the `.py` files were treated as the schematic. Symbol pin numbers were
-checked against `hardware/lib/odeck.kicad_sym`.
+checked against `hardware/lib/odock.kicad_sym`.
 
 Datasheets used (downloaded and read):
 - Infineon PMG1-S3 002-31288 Rev. *K (2025-05-23), referred to below as **PMG1 DS**.

@@ -1,6 +1,6 @@
-# odeck-10 routing notes: copper zones, power routing, GND stitching
+# odock-10 routing notes: copper zones, power routing, GND stitching
 
-Scripts (all in `hardware/odeck-10/routing/`):
+Scripts (all in `hardware/odock-10/routing/`):
 - `a_planes.py`: zones and keep-outs only (no tracks, `NETS = []`).
 - `b_power.py`: power pours, via arrays, gate drives, Kelvin taps, card-reader VCC, and the hot-loop GND vias.
   `GND` is in its `NETS`.

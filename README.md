@@ -1,22 +1,22 @@
-# odeck
+# odock
 
 An open-hardware USB-C deck you can order fully assembled from JLCPCB and use as a bare PCB the day it
 arrives: USB-C upstream, display out, USB-A, SD + microSD, 2.5 GbE, up to **140 W** pass-through
 charging, a small status LCD instead of a wall of LEDs, and an RP2350 you can reprogram.
 
-The long-term goal is a **40 Gbps USB4** deck. The first board, **odeck-10**, is a 10 Gbps USB-C deck
+The long-term goal is a **40 Gbps USB4** deck. The first board, **odock-10**, is a 10 Gbps USB-C deck
 built only from parts JLC stocks, to prove out everything the USB4 version will reuse: power, PD,
 firmware, display, card reader, Ethernet, board shape and silkscreen.
 
-![odeck-10 rough placement](docs/images/odeck-10-iso.png)
+![odock-10 rough placement](docs/images/odock-10-iso.png)
 
 > **Status (2026-10): schematic complete and reviewed, placement done (DRC-clean, unrouted) — not routed,
-> not fabricated.** Placement is code: `hardware/odeck-10/layout/*.py` (one script per board region, see
+> not fabricated.** Placement is code: `hardware/odock-10/layout/*.py` (one script per board region, see
 > `docs/floorplan.md`). The LCD panel and the two JAE USB-C receptacles have no 3D model yet, and the
-> GPIO header is shown although it ships unpopulated. More views: [top](docs/images/odeck-10-top.png) ·
-> [bottom](docs/images/odeck-10-bottom.png).
+> GPIO header is shown although it ships unpopulated. More views: [top](docs/images/odock-10-top.png) ·
+> [bottom](docs/images/odock-10-bottom.png).
 
-## odeck-10 at a glance
+## odock-10 at a glance
 
 | | |
 |---|---|
@@ -51,12 +51,12 @@ firmware, display, card reader, Ethernet, board shape and silkscreen.
 | Path | What |
 |---|---|
 | `docs/requirements.md` | Goals and constraints for the whole project (USB4 end goal) |
-| `docs/odeck-10.md` | **Start here** — odeck-10 architecture, part choices, design rules, integration items, status |
+| `docs/odock-10.md` | **Start here** — odock-10 architecture, part choices, design rules, integration items, status |
 | `docs/power-budget.md`, `docs/board-layout.md` | Power/thermal budget, outline & placement plan, stack-up |
 | `docs/design/*.md` | Per-sheet design notes with every calculation |
 | `docs/review/*.md` | Independent schematic and footprint reviews, with resolutions |
 | `docs/research/*.md` | Chip, JLC capability and sourcing research (incl. why 40G is not buildable from JLC stock yet) |
-| `hardware/odeck-10/` | KiCad 10 project. Schematic sheets are **generated** from `sheets/*.py` |
+| `hardware/odock-10/` | KiCad 10 project. Schematic sheets are **generated** from `sheets/*.py` |
 | `hardware/lib/` | Project symbols, footprints (all checked against manufacturer drawings) and 3D models |
 | `tools/schgen/` | Schematics-as-code generator + netlist verification |
 | `tools/pcbsync.py` | Scripted "update PCB from schematic" (keeps placed parts where they are; `--refresh` reloads footprints) |
@@ -71,27 +71,27 @@ Requires KiCad 10 (`/Applications/KiCad` on macOS) and Python 3.10+.
 
 ```sh
 # regenerate every schematic sheet from its Python source and verify the netlist
-python3 hardware/odeck-10/sheets/build_all.py
+python3 hardware/odock-10/sheets/build_all.py
 
 # electrical rules check
-/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch erc hardware/odeck-10/odeck-10.kicad_sch
+/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli sch erc hardware/odock-10/odock-10.kicad_sch
 
 # every part in JLC stock?  (+ cost summary)
 python3 tools/bom_check.py
 
 # push schematic changes into the PCB (uses KiCad's bundled Python)
-/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3 tools/pcbsync.py hardware/odeck-10
+/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3 tools/pcbsync.py hardware/odock-10
 
 # render
-/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli pcb render --side top -o top.png hardware/odeck-10/odeck-10.kicad_pcb
+/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli pcb render --side top -o top.png hardware/odock-10/odock-10.kicad_pcb
 ```
 
-Edit schematics by editing `hardware/odeck-10/sheets/<sheet>.py`, never the generated `.kicad_sch`.
+Edit schematics by editing `hardware/odock-10/sheets/<sheet>.py`, never the generated `.kicad_sch`.
 Inter-sheet nets are declared in `tools/schgen/nets.py`.
 
 ## Roadmap
 
-1. **odeck-10** (10 Gbps, JLC parts only) — schematic ✅ · review ✅ · footprints ✅ · placement ✅ ·
+1. **odock-10** (10 Gbps, JLC parts only) — schematic ✅ · review ✅ · footprints ✅ · placement ✅ ·
    routing ⏳ · firmware · order prototypes · bring-up
 2. **20/40 Gbps USB4** — waiting on a USB4 hub controller (and its firmware) that can actually be sourced;
    see `docs/research/usb4-hub.md`.

@@ -1,6 +1,6 @@
-# odeck-10 — USB hub sheet (`usb_hub.kicad_sch`, refs 600+)
+# odock-10 — USB hub sheet (`usb_hub.kicad_sch`, refs 600+)
 
-Source: `hardware/odeck-10/sheets/usb_hub.py` (generated, netlist-verified). References:
+Source: `hardware/odock-10/sheets/usb_hub.py` (generated, netlist-verified). References:
 - USB7206C datasheet DS00003850F (cited as "DS").
 - AN2935 rev C, *Configuration of USB7206/USB7206C/…*.
 - USB7206 Hardware Design Checklist DS00003336A. The USB7206C checklist PDF is blocked behind a 403. The USB7206 and

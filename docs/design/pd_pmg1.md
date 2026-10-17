@@ -1,6 +1,6 @@
-# pd_pmg1 — PMG1-S3 dual-port PD controller (odeck-10)
+# pd_pmg1 — PMG1-S3 dual-port PD controller (odock-10)
 
-Sheet: `hardware/odeck-10/pd_pmg1.kicad_sch`, generated from `hardware/odeck-10/sheets/pd_pmg1.py` (ref base 400).
+Sheet: `hardware/odock-10/pd_pmg1.kicad_sch`, generated from `hardware/odock-10/sheets/pd_pmg1.py` (ref base 400).
 Datasheet: Infineon 002-31288 Rev. *K (2025-05-23), "EZ-PD PMG1-S3 Power Delivery MCU Gen1". Pin functions and
 the SCB0 / SCB5 / HPD pin choices follow Infineon's `mtb-example-pmg1s3-usbc-dock` (`templates/TARGET_PMG1S3DUAL/config/design.modus`).
 
@@ -116,7 +116,7 @@ goes to +5V. VBUS_IN_CTRL_P1 drives the supply-side FET gate and VBUS_OUT_CTRL_P
   UV/OV come from VBUS_C_P0. The internal discharge acts on VBUS_LAPTOP only. VBB_OUT, behind the LM74800 ideal
   diode, is discharged by cycling VBB_EN (power_laptop).
 - OVP latch (LAPTOP_OVP_N low): drop LAPTOP_SRC_EN and VBB_EN, report to the RP2350, and re-enable only from 5.1 V.
-- Bus-powered ↔ external-power transitions: PR_Swap or a brief detach (odeck-10.md open question 2).
+- Bus-powered ↔ external-power transitions: PR_Swap or a brief detach (odock-10.md open question 2).
 - **Dead-battery boot** (powered from VBUS, no VSYS) must come up as a **sink with Rd**: no DRP toggling and no
   Try.SRC until the contract. TPD4S480 closes its CC FETs ≤ 3.5 ms after VPWR and drops its own DB resistors by
   9.5 ms; the PMG1 Rd must be present the moment the FETs close (TPD4S480 §6.3.3). CYPM1321 (Rd-DB) is the only
@@ -172,7 +172,7 @@ P3V3_SNS goes high and on every detach. The DP lanes stay off meanwhile (CTL1 lo
 - **Firmware update:** the RP2350 acts as SWD programmer on P1.1/P1.2 plus XRES, through three default-closed solder
   jumpers. These use `Jumper:SolderJumper_2_Bridged` with footprint `SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm`
   and are `in_bom no`; `pd_pmg1.py` post-processes the generated file to set that. Cut them to isolate the PMG1
-  (no flash interlock, per odeck-10.md). The PMG1 I2C bootloader is an alternative path.
+  (no flash interlock, per odock-10.md). The PMG1 I2C bootloader is an alternative path.
 - Test pads: SWDIO_L, SWCLK_L, XRES, UART TX/RX, GND. These allow an external probe after the jumpers are cut.
 
 ## Parts (JLC stock 2026-10-02)

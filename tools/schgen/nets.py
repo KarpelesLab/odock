@@ -1,4 +1,4 @@
-# Inter-sheet nets for odeck-10. Nets listed here get global labels; everything else is local to its sheet.
+# Inter-sheet nets for odock-10. Nets listed here get global labels; everything else is local to its sheet.
 # Keep names in sync with docs/nets.md. Power symbols are used for POWER_SYMBOL_NETS.
 
 POWER_SYMBOL_NETS = ["GND"]

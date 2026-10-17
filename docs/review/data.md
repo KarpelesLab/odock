@@ -1,6 +1,6 @@
-# odeck-10 — data-path sheet review (usb_hub, usb_a, card_reader, ethernet)
+# odock-10 — data-path sheet review (usb_hub, usb_a, card_reader, ethernet)
 
-Reviewer: independent pre-layout review, 2026-10-02. Scope: `hardware/odeck-10/sheets/usb_hub.py`, `usb_a.py`,
+Reviewer: independent pre-layout review, 2026-10-02. Scope: `hardware/odock-10/sheets/usb_hub.py`, `usb_a.py`,
 `card_reader.py`, `ethernet.py`, plus the nets they share with `mcu.py`, `usbc_muxes.py` and `power_rails.py`.
 
 Method:

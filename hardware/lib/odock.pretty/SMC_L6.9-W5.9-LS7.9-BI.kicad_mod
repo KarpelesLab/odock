@@ -1,0 +1,143 @@
+(footprint "SMC_L6.9-W5.9-LS7.9-BI"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 0)
+		(layer "F.SilkS")
+		(uuid "176c9e40-4471-4450-b4bd-16b504d75fd4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "SMC_L6.9-W5.9-LS7.9-BI"
+		(at 0 4 0)
+		(layer "F.Fab")
+		(uuid "c6e7d99d-3467-4b0b-b622-e9ed2a95b106")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7ded72be-f001-4531-94b5-0b0c7f1650bd")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" "DO-214AB (SMC) 6.9x5.9mm body, land per MDD SMCJ series datasheet suggested pad layout (A=4.3, B=4.1, C=7.9 centres, D=3.8 gap, E=12.0) ; bidirectional"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7d1db462-f9e8-449e-9fb2-00f441a5ff84")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C408370"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "81e8a587-4410-4b01-ad82-c50e3fec60ba")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(descr "DO-214AB (SMC) 6.9x5.9mm body, land per MDD SMCJ series datasheet suggested pad layout (A=4.3, B=4.1, C=7.9 centres, D=3.8 gap, E=12.0) ; bidirectional")
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_rect
+		(start -3.45 -2.95)
+		(end 3.45 2.95)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "412d27dc-2b1a-4200-9b58-106f2750f992")
+	)
+	(fp_line
+		(start -1.7 -3.1)
+		(end 1.7 -3.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "48951a32-77c2-43ab-a674-edc11d419cb8")
+	)
+	(fp_line
+		(start -1.7 3.1)
+		(end 1.7 3.1)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "df7f0fef-dcbb-4aae-baec-193fa66097e7")
+	)
+	(fp_rect
+		(start -6.25 -3.2)
+		(end 6.25 3.2)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "96d54884-8b2c-44cd-a119-7cc1570feedb")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "11b9d03a-bb94-49a8-97e8-67ef693d382e")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -3.95 0)
+		(size 4.1 4.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.06)
+		(uuid "d0fd4217-8e7e-4daf-a31f-2afcf77083ee")
+	)
+	(pad "2" smd roundrect
+		(at 3.95 0)
+		(size 4.1 4.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.06)
+		(uuid "fe46ada6-224b-48b7-9cfd-db18d0fe8865")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../lib/odock.3dshapes/SMC_L6.9-W5.9-H2.1-LS7.9.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

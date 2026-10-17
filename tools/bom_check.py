@@ -1,4 +1,4 @@
-"""Check every LCSC part used in the odeck-10 schematics against JLCPCB stock.
+"""Check every LCSC part used in the odock-10 schematics against JLCPCB stock.
 Rule (2026-10-02): every part must be a JLC part with stock >= MIN_STOCK (default 5) — no consignment.
 usage: python3 tools/bom_check.py [--min 5] [project_dir]"""
 import sys, os, re, glob, json, time, urllib.request, argparse
@@ -21,7 +21,7 @@ def jlc(code):
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--min", type=int, default=5)
-ap.add_argument("project", nargs="?", default=os.path.join(os.path.dirname(__file__), "..", "hardware", "odeck-10"))
+ap.add_argument("project", nargs="?", default=os.path.join(os.path.dirname(__file__), "..", "hardware", "odock-10"))
 a = ap.parse_args()
 uses = {}
 missing = []

@@ -1,4 +1,4 @@
-# odeck-10 — JLC extended-part cost pass (2026-10-02)
+# odock-10 — JLC extended-part cost pass (2026-10-02)
 
 JLC charges ~$3 per unique **extended** (non-basic) LCSC part per assembly order. This pass swapped every
 generic passive that has a JLC **basic** equivalent with equal-or-better specs (same value, same or larger

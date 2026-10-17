@@ -1,7 +1,7 @@
 # Placement fixes for routing (2026-10-03)
 
 These changes answer the placement requests in `hs_usbc.md`, `hs_hub.md` and `power.md`. They live in the layout
-scripts (`hardware/odeck-10/layout/*.py`) and have been applied to `odeck-10.kicad_pcb`.
+scripts (`hardware/odock-10/layout/*.py`) and have been applied to `odock-10.kicad_pcb`.
 
 **Board check after `tools/apply_layout.py`:**
 - 0 courtyard overlaps.

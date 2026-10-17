@@ -1,8 +1,8 @@
-# Footprint review 1/2 — entries [1]–[27] (odeck-10)
+# Footprint review 1/2 — entries [1]–[27] (odock-10)
 
-Scope: the custom footprints in `hardware/lib/odeck.pretty` listed as [1]–[27] in the footprint inventory
+Scope: the custom footprints in `hardware/lib/odock.pretty` listed as [1]–[27] in the footprint inventory
 (the other half is in `footprints-2.md`). For each one I compared pad count, pad numbers against the symbol pin
-numbers (`hardware/lib/odeck.kicad_sym`), pitch, pad size, row spacing, EP size and paste, drills, pin‑1
+numbers (`hardware/lib/odock.kicad_sym`), pitch, pad size, row spacing, EP size and paste, drills, pin‑1
 orientation and courtyard with the manufacturer drawing. All 27 files load in pcbnew and
 `kicad-cli fp upgrade` runs on them cleanly. Every symbol pin number has a pad, and the only pads without a
 symbol pin are unnumbered paste apertures and NPTH holes.
@@ -58,5 +58,5 @@ the parts that share a footprint.
 - The regenerated footprints keep the original EasyEDA 3D model reference and pin‑1 location; #2 uses the KiCad
   stock model. #12 has no 3D model.
 - `FL_001.kicad_mod` (committed in f6b48b1, not in either review list) is in the legacy `module` format and stops kicad-cli from
-  loading the whole `odeck.pretty` library (`fp export svg` fails with "Unable to load library"). Whoever
+  loading the whole `odock.pretty` library (`fp export svg` fails with "Unable to load library"). Whoever
   imported it should run `kicad-cli fp upgrade`.

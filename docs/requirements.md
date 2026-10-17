@@ -1,4 +1,4 @@
-# odeck — Requirements
+# odock — Requirements
 
 Open USB4 (40 Gbps) deck, designed to be fabricated **and fully assembled** by JLCPCB,
 usable as a bare PCB straight out of the box.
@@ -8,7 +8,7 @@ usable as a bare PCB straight out of the box.
 - **Upstream:** USB-C, USB4 40 Gbps (TB3/TB4 host compatible), PD source to host up to **140 W (PD 3.1 EPR, 28 V × 5 A)**, 100 W SPR fallback.
 - **Downstream:**
   - 1× USB-C USB4/TB (daisy chain, DP alt mode monitor — "USB display")
-  - 1× HDMI (target HDMI 2.1 / 4K120 via DP→HDMI PCON; 4K60 minimum) — 40G version; odeck-10 uses DP alt mode on the downstream USB-C only
+  - 1× HDMI (target HDMI 2.1 / 4K120 via DP→HDMI PCON; 4K60 minimum) — 40G version; odock-10 uses DP alt mode on the downstream USB-C only
   - 2× USB-A 10 Gbps
   - SD (UHS-I min, UHS-II stretch) + microSD
   - 2.5GbE RJ45
@@ -55,7 +55,7 @@ usable as a bare PCB straight out of the box.
 - Tooling: KiCad 9+, JLC impedance-controlled stackup (6–8 layers expected).
 
 ## Roadmap
-1. **odeck-10** — USB 3.2 10 Gbps + DP alt mode, all JLC-assemblable (see `odeck-10.md`). Current focus.
+1. **odock-10** — USB 3.2 10 Gbps + DP alt mode, all JLC-assemblable (see `odock-10.md`). Current focus.
 2. 20G / 40G — USB4 core, once a chip + firmware can be sourced. Not started.
 
 User GPIO header ships unpopulated. Display: 2.0" 320×240 IPS.

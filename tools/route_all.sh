@@ -1,5 +1,5 @@
 #!/bin/sh
-# Full routing pipeline for odeck-10 (writes the routed board to hardware/odeck-10/odeck-10.kicad_pcb).
+# Full routing pipeline for odock-10 (writes the routed board to hardware/odock-10/odock-10.kicad_pcb).
 #  1. scripted routing (planes, power, high-speed)       routing/[a-y]*.py
 #  2. drop outer-layer GND pours so they don't block the autorouter
 #  3. Freerouting on the remaining nets (long: run detached, see README)
@@ -7,7 +7,7 @@
 # usage: tools/route_all.sh [passes]
 set -e
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-PD="$ROOT/hardware/odeck-10"
+PD="$ROOT/hardware/odock-10"
 P=/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3
 K=/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli
 W="$PD/build"; mkdir -p "$W"
@@ -28,6 +28,6 @@ PY
 echo "== 3. autoroute ($PASSES passes)"
 $P "$ROOT/tools/autoroute.py" "$W/stage1b.kicad_pcb" --passes "$PASSES" --out "$W/stage2.kicad_pcb"
 echo "== 4. zones + stitching + fill"
-$P "$ROOT/tools/apply_routing.py" "$PD" --pcb "$W/stage2.kicad_pcb" --only a_planes,z_stitch --out "$PD/odeck-10.kicad_pcb"
-$K pcb drc --severity-error -o "$W/drc.rpt" "$PD/odeck-10.kicad_pcb" || true
+$P "$ROOT/tools/apply_routing.py" "$PD" --pcb "$W/stage2.kicad_pcb" --only a_planes,z_stitch --out "$PD/odock-10.kicad_pcb"
+$K pcb drc --severity-error -o "$W/drc.rpt" "$PD/odock-10.kicad_pcb" || true
 grep "^\*\* Found" "$W/drc.rpt" || true

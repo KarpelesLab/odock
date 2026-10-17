@@ -9,7 +9,7 @@ Each hardware/<proj>/routing/<name>.py defines:
 Scripts run in file-name order, so later scripts (e.g. the autorouter output) can build on earlier ones.
 
   /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3 \
-      tools/apply_routing.py hardware/odeck-10 [--only a,b] [--out other.kicad_pcb] [--drc]
+      tools/apply_routing.py hardware/odock-10 [--only a,b] [--out other.kicad_pcb] [--drc]
 """
 import os, sys, glob, math, argparse, importlib.util, subprocess
 import pcbnew

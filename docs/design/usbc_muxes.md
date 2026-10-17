@@ -1,6 +1,6 @@
-# odeck-10 — usbc_muxes sheet
+# odock-10 — usbc_muxes sheet
 
-Source: `hardware/odeck-10/sheets/usbc_muxes.py` (generates `usbc_muxes.kicad_sch`, ref_base 500, A1).
+Source: `hardware/odock-10/sheets/usbc_muxes.py` (generates `usbc_muxes.kicad_sch`, ref_base 500, A1).
 Status: first schematic pass, 2026-10-02. `build_all.py usbc_muxes` gives `netlist verify: OK`.
 `tools/bom_check.py`: every part on this sheet is a JLC part with stock ≥ 5 (none consigned).
 Datasheets used: TI SLLSF48C (TUSB1064), SLLSEW2E (TUSB1046-DCI), SLVSH00 (TPD4S480), SLVSDK3C (TPD6S300),

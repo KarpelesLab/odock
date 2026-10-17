@@ -1,4 +1,4 @@
-# odeck-10 — power stage & JLC assembly research (2026-10-02)
+# odock-10 — power stage & JLC assembly research (2026-10-02)
 
 Tags: **[V]** checked against a datasheet, vendor page or JLC page (URL given) · **[S]** JLC parts API stock on 2026-10-02
 (`q.py`, LCSC numbers) · **[I]** inference or engineering estimate, verify before committing.
@@ -142,7 +142,7 @@ Conduction loss: barrel at 8.3 A through 2 × 2.6 mΩ ≈ 0.36 W. PD path at 3.6
   scheme. It is MCU-independent and satisfies "power safety must not depend on MCU firmware".
 - AVS / fine trim (optional): an RP2350 PWM → RC → resistor injection into FB, with **limited authority** (e.g. ±1 V,
   set by the resistor ratio).
-  - Laptops at 140 W use the 28 V fixed PDO, so AVS is not needed for odeck-10.
+  - Laptops at 140 W use the 28 V fixed PDO, so AVS is not needed for odock-10.
   - PD transition rules (slew ≤30 mV/µs, ±5%) are handled by soft-start/tracking caps.
 
 **Safety layers [I]**
@@ -330,7 +330,7 @@ No UHS-II full-size socket in JLC stock. That matches the "UHS-I minimum" goal.
 1. **Thermal** (§5). This is the biggest risk for "bare-PCB, 140 W" at 100 × 60 mm.
 2. **Laptop-port PD controller features.** It must support DRP, dead-battery sink, PR_Swap and ideally FRS, and drive
    two back-to-back gate pairs (Q4/Q5) or accept external gate drivers. This depends on open question 1 in
-   odeck-10.md.
+   odock-10.md.
 3. **Stock depth.** LM51770 (1007), LM74720 (776), 2.5G magjack (111), PJ-063BH (240). Pre-order into the JLC library.
    Fallbacks: BQ25756 (9088), LM74800 (10k), DC-042C-W-2.5 (1340).
 4. **LM51770 DTRK/tracking pin details, and GPIO-switched FB transient behaviour (overshoot when stepping

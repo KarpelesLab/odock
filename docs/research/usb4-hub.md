@@ -2,7 +2,7 @@
 
 V = verified (source in agent report / URLs below), I = inferred.
 
-| Chip | Provides | Fits odeck? | Package | Docs / FW | PD | Availability |
+| Chip | Provides | Fits odock? | Package | Docs / FW | PD | Availability |
 |---|---|---|---|---|---|---|
 | VIA Labs VL830/VL832 | 1× USB4 **upstream only** (endpoint device), 4× USB 10G + USB2, 1× DP 1.4a out; no PCIe, no TB3 compat (V) | **No** — no USB4 downstream, no PCIe | 10×10 FCCSP-328, 0.5 mm (V) | NDA; signed FW in SPI (fwupd supports updates) | VL105 / VL108 | Not on LCSC (consigned-only JLC entry) |
 | **Intel JHL8440** (Goshen Ridge, TB4) | 1 up + 3 down 40G (DP alt), native PCIe Gen3 x1, native USB 10G (V) | **Yes, full topology** | 10.7×10.7 BGA, pitch not public | NDA; Intel-signed FW, licensed vendors only | TPS65988 / TPS65994AD / CYPD5235 in docks | Mouser 0 stock, "shipping restricted", $21/$18 @1/@10; not at DigiKey |

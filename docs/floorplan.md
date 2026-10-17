@@ -1,10 +1,10 @@
-# odeck-10 — Floorplan (placement regions)
+# odock-10 — Floorplan (placement regions)
 
 Board **130 × 89 mm** (grown from 85 on 2026-10-03 so the 31 mm-deep SD socket fits), origin (top-left) at (100, 50) mm.
 **Back edge = top (y = 50)**, front edge = bottom (y = 139).
 Mounting holes H1 (104,54), H2 (226,54), H3 (104,135), H4 (226,135): keep ≥ 4 mm clear.
 Regions apply to both sides (small passives may go on the bottom under their block). Placement is code:
-`hardware/odeck-10/layout/<block>.py`, applied with `tools/apply_layout.py`.
+`hardware/odock-10/layout/<block>.py`, applied with `tools/apply_layout.py`.
 
 ```
  x: 100          138                  180                       230

@@ -1,6 +1,6 @@
 # Footprint review, part 2 (entries [28] to [54])
 
-Scope: the custom footprints in `hardware/lib/odeck.pretty` listed as entries [28] to [54] of the footprint/part list. Each one was checked against the manufacturer's land pattern for pad count, pad numbering versus the `odeck.kicad_sym` pin numbers, pitch, pad size, row span, exposed pad (EP), drill and slot sizes, pin-1 orientation and courtyard. All 27 footprints load with `pcbnew.FootprintLoad`. For every symbol in this range, the footprint pad numbers and the symbol pin numbers are the same set.
+Scope: the custom footprints in `hardware/lib/odock.pretty` listed as entries [28] to [54] of the footprint/part list. Each one was checked against the manufacturer's land pattern for pad count, pad numbering versus the `odock.kicad_sym` pin numbers, pitch, pad size, row span, exposed pad (EP), drill and slot sizes, pin-1 orientation and courtyard. All 27 footprints load with `pcbnew.FootprintLoad`. For every symbol in this range, the footprint pad numbers and the symbol pin numbers are the same set.
 
 ## Issues found in every EasyEDA import (fixed)
 

@@ -1,6 +1,6 @@
 # Routing notes: `hs_usbc` (usbc block high-speed nets, slow connector nets, links to the hub)
 
-Script: `hardware/odeck-10/routing/c_hs_usbc.py` (80 nets, no zones). Adapted to placement-fixes commit 61e4dc2:
+Script: `hardware/odock-10/routing/c_hs_usbc.py` (80 nets, no zones). Adapted to placement-fixes commit 61e4dc2:
 - U501 moved 2 mm south, U504 moved 3.2 mm east, C611/C612 swapped, TP1206 moved.
 - The lane nets are now in the HS_85 / USB_90 netclasses, so all pairs use the brief's nominal widths and gaps.
 

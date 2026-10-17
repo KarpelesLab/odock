@@ -1,8 +1,8 @@
-# odeck-10 design review: MCU, display/UI and sensors
+# odock-10 design review: MCU, display/UI and sensors
 
 Reviewed on 2026-10-02 by an independent reviewer. This is a report only; no project files were changed.
 
-**Scope.** The sheets `hardware/odeck-10/sheets/mcu.py`, `display_ui.py` and `sensors.py`, plus every MCU net where it
+**Scope.** The sheets `hardware/odock-10/sheets/mcu.py`, `display_ui.py` and `sensors.py`, plus every MCU net where it
 lands on another sheet: pd_pmg1, usb_hub, usb_a, ethernet, card_reader, power_input, power_laptop and power_rails.
 
 **Method.**

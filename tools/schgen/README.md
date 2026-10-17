@@ -1,9 +1,9 @@
 # schgen — schematics as code
 
-odeck-10 schematic sheets are generated from Python so they can be reviewed, diffed and verified.
+odock-10 schematic sheets are generated from Python so they can be reviewed, diffed and verified.
 
-- Sheet sources: `hardware/odeck-10/sheets/<sheet>.py`, each exposing `build(project_dir) -> Sheet`.
-- Build + verify everything: `python3 hardware/odeck-10/sheets/build_all.py` (or pass module names).
+- Sheet sources: `hardware/odock-10/sheets/<sheet>.py`, each exposing `build(project_dir) -> Sheet`.
+- Build + verify everything: `python3 hardware/odock-10/sheets/build_all.py` (or pass module names).
   Verification exports the netlist with `kicad-cli` and checks every pin is on its intended net.
 - Never hand-edit generated `.kicad_sch` files — edit the Python and rebuild.
 
@@ -15,8 +15,8 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "..", "..", "to
 from schgen import Sheet
 
 def build(D):
-    s = Sheet(D, "sensors.kicad_sch", "odeck-10 — Sensors", ref_base=1200)
-    s.part("odeck:TMP1075DSGR", "U", "TMP1075", at=(60.96, 50.8),
+    s = Sheet(D, "sensors.kicad_sch", "odock-10 — Sensors", ref_base=1200)
+    s.part("odock:TMP1075DSGR", "U", "TMP1075", at=(60.96, 50.8),
            pins={"SDA": "I2C_SYS_SDA", "SCL": "I2C_SYS_SCL", "ALERT": "TEMP_ALERT_N",
                  "V+": "+3V3", "GND": "GND", "A0": "GND", "A1": "GND", "A2": "GND", "EP": "GND"})
     s.c("100n", "+3V3", "GND", at=(91.44, 50.8), lcsc="C1525")
@@ -36,7 +36,7 @@ def build(D):
 - `at` positions in mm on a 2.54 mm grid; place related parts near each other. Symbols are placed
   unrotated (rot=0); a short wire stub + label is added on each pin.
 - Passives: `s.r()`, `s.c()` with KiCad standard footprints; set `lcsc=` to a JLC **basic** part
-  whenever possible. Other parts: `s.part("Device:L", ...)`, `s.part("odeck:<symbol>", ...)`.
+  whenever possible. Other parts: `s.part("Device:L", ...)`, `s.part("odock:<symbol>", ...)`.
 
 ## Adding parts from LCSC
 

@@ -1,4 +1,4 @@
-# USB-C PD controller selection — odeck-10 (researched 2026-10-02)
+# USB-C PD controller selection — odock-10 (researched 2026-10-02)
 
 [V] = verified in datasheet/vendor page (URL in Sources), [S] = stock/price query 2026-10-02 (JLC parts API,
 findchips authorized distis), [I] = inference / to verify on hardware or with vendor.
@@ -44,7 +44,7 @@ DP Alt Mode **DFP_D**. **(c)** PD-in — **sink** EPR up to 48 V / 240 W.
      (port 1 sink HPD → port 0 Attention/Status) is our application code on top of PdAltMode [I].
    - SOP' discovery / 5 A cable check: in PdStack (standard for EPR source) [I — confirm config flag].
 2. **Port (c): TI TPS26750** (as planned). Datasheet: EPR 28/36/48 V sink, boots from ROM + I2C EEPROM [V].
-3. **Correction to odeck-10.md:** **TUSB1046-DCI is a *DFP_D* (source-side) redriver** [V] → use it on the
+3. **Correction to odock-10.md:** **TUSB1046-DCI is a *DFP_D* (source-side) redriver** [V] → use it on the
    **downstream** port; the laptop port needs **TUSB1064** (UFP_D sink-side, pin C/D/E) [V].
    JLC: TUSB1064IRNQT 53, TUSB1064RNQT 20; Mouser 242 @ $10.04 [S].
 

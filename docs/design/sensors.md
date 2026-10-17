@@ -1,7 +1,7 @@
-# odeck-10 — Sensors sheet (`sensors.kicad_sch`, refs 1200+)
+# odock-10 — Sensors sheet (`sensors.kicad_sch`, refs 1200+)
 
-Source: `hardware/odeck-10/sheets/sensors.py` (generated, netlist-verified). The sheet holds the prototype's thermal
-instrumentation (odeck-10.md "Thermal & power instrumentation"). Power monitors (INA226/INA237/INA180) live on the
+Source: `hardware/odock-10/sheets/sensors.py` (generated, netlist-verified). The sheet holds the prototype's thermal
+instrumentation (odock-10.md "Thermal & power instrumentation"). Power monitors (INA226/INA237/INA180) live on the
 power and usb_a sheets.
 
 ## Contents

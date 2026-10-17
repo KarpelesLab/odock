@@ -1,6 +1,6 @@
 # Routing notes: `g_usbc` (usbc region, phase g)
 
-Script: `hardware/odeck-10/routing/g_usbc.py` (`NETS = []`, `GROUPED = True`: everything it draws is in group
+Script: `hardware/odock-10/routing/g_usbc.py` (`NETS = []`, `GROUPED = True`: everything it draws is in group
 `route:g_usbc`, and only that group is replaced on a re-run). It runs after a_planes, b_power, c_hs_usbc, d_hs_hub,
 e_hs_eth_sd and f_fanout, and before z_stitch / Freerouting.
 
@@ -49,7 +49,7 @@ annular ring is 0.10 mm, so there are no 0.30 vias.
 
 Re-run:
 ```
-GUSBC_DEBUG=1 apply_routing.py <scratch>/odeck-10 --only a_planes,b_power,c_hs_usbc,d_hs_hub,e_hs_eth_sd,f_fanout,g_usbc,z_stitch --drc
+GUSBC_DEBUG=1 apply_routing.py <scratch>/odock-10 --only a_planes,b_power,c_hs_usbc,d_hs_hub,e_hs_eth_sd,f_fanout,g_usbc,z_stitch --drc
 ```
 - The script takes about 13 min in KiCad's Python.
 - `GUSBC_PHASES=AB` skips the supply phase. `GUSBC_NEG_ITERS` sets the number of negotiation passes.

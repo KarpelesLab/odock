@@ -1,6 +1,6 @@
-# odeck-10 — Ethernet sheet (`ethernet.kicad_sch`, refs 800+)
+# odock-10 — Ethernet sheet (`ethernet.kicad_sch`, refs 800+)
 
-Source: `hardware/odeck-10/sheets/ethernet.py` (generated, netlist-verified). Stock figures are from the JLC parts API on
+Source: `hardware/odock-10/sheets/ethernet.py` (generated, netlist-verified). Stock figures are from the JLC parts API on
 2026-10-02. Re-check them before ordering.
 
 ## Sources used
@@ -162,12 +162,12 @@ How the RTL8156BG gets its MAC (DS 6.4, 6.6, tables 20–21):
 
 ## 6. MDI and magjack
 - **Jack:** USAKRO DGUK211Q340CD2A4D2 (C19725134, 111 in stock, $2.85), tab-up, THT.
-  - The jack datasheet shows **green (14+/13−) and yellow (12+/11−) LEDs**, so the "no LEDs" note in odeck-10.md was wrong.
+  - The jack datasheet shows **green (14+/13−) and yellow (12+/11−) LEDs**, so the "no LEDs" note in odock-10.md was wrong.
   - 1CT:1CT, OCL 180 µH, return loss to 200 MHz, Hi-pot 2250 VDC. Cable-side 4 × 75 Ω + 1000 pF/2 kV are inside.
   - It is the only stocked 2.5G-rated jack with ≥ 100 stock. Alternates: DGUK511Q340AB2A8D2 (C19725141, 47 stock, same
     LEDs, different footprint) and DGUK111Q340AB2A1D2 (8 stock). The common HR911130A (10k stock) is 1G-rated only.
 - **Footprint:** the imported easyeda footprint numbered both shell pads "15", while the symbol has 15/16. The second shell
-  pad was renamed to 16 in `hardware/lib/odeck.pretty/RJ45-TH_DGUK211Q340CD2A4D2.kicad_mod`. Verify the rest of the
+  pad was renamed to 16 in `hardware/lib/odock.pretty/RJ45-TH_DGUK211Q340CD2A4D2.kicad_mod`. Verify the rest of the
   footprint against the drawing (pitch 1.27/2.54 staggered, LED pins 11–14, Ø3.2 pegs).
 - **Pair mapping:** MDI0→TD1 (RJ 1/2, BI_DA), MDI1→TD2 (3/6, BI_DB), MDI2→TD3 (4/5, BI_DC), MDI3→TD4 (7/8, BI_DD). If the
   QFN-to-jack order forces crossings, use the PHY MDI-swap option (DS 6.15) rather than vias. Auto-MDIX and polarity
@@ -175,7 +175,7 @@ How the RTL8156BG gets its MAC (DS 6.4, 6.6, tables 20–21):
 - **PHY-side centre taps** (pins 5 and 6): 390 pF C0G to GND, the RTL8125B-series value (2.5G voltage-mode driver: no bias
   feed). A 100 nF DNP alternate is provided.
 - **No ESD array on MDI.** The magnetics isolate and Realtek's reference has none.
-- **Shell to GND directly.** This follows the odeck convention of no chassis net, the same as USB connectors.
+- **Shell to GND directly.** This follows the odock convention of no chassis net, the same as USB connectors.
 
 ## Global nets used
 `+3V3`, `GND`, `ETH_SS_TXP/TXN/RXP/RXN`, `ETH_DP`, `ETH_DN`, `ETH_LED0..2`, `ETH_RESET_N`, `I2C_SYS_SCL`, `I2C_SYS_SDA`.

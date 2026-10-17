@@ -1,6 +1,6 @@
-# odeck-10 — Card reader sheet (`card_reader.kicad_sch`, ref 900)
+# odock-10 — Card reader sheet (`card_reader.kicad_sch`, ref 900)
 
-Source: `hardware/odeck-10/sheets/card_reader.py`. Genesys **GL3224-ONY04** (QFN-48, 2 LUN) on USB7206C hub port 1. It
+Source: `hardware/odock-10/sheets/card_reader.py`. Genesys **GL3224-ONY04** (QFN-48, 2 LUN) on USB7206C hub port 1. It
 drives a full-size SD socket (slot 1) and a microSD socket (slot 2).
 
 ```

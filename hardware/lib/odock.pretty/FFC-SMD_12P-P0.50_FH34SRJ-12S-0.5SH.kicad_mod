@@ -1,0 +1,267 @@
+(footprint "FFC-SMD_12P-P0.50_FH34SRJ-12S-0.5SH"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -3.3 0)
+		(layer "F.SilkS")
+		(uuid "137acc78-a2b2-47d0-a21d-9b803979c689")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "FFC-SMD_12P-P0.50_FH34SRJ-12S-0.5SH"
+		(at 0 3.4 0)
+		(layer "F.Fab")
+		(uuid "6bb61fae-c497-40d6-94aa-9833943c2a89")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.09)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.hirose.com/product/document?clcode=CL0580-1253-0-50&productname=FH34SRJ-12S-0.5SH(50)&series=FH34SRJ&documenttype=Catalog&lang=en"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "33b52f17-b64d-4214-bd90-2fda1a104311")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Hirose FH34SRJ-12S-0.5SH(50) 0.5 mm FPC connector, 12 contacts, top and bottom contact, back-flip, 1.0 mm high (Hirose FH34SRJ catalog 2019-08, recommended PCB mounting pattern: signal pads 0.3x0.8 @0.5, B=5.5; tabs 0.4x0.8, E=7.1 / F=7.9; 3.3 from signal-pad outer edge to tab outer edge). Signal pads (rear, actuator side) at -Y; FPC opening at +Y. Viewed from the top with the opening at +Y, contact 1 is at +X. Pads 13/14 = mounting tabs."
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "da01138b-c101-45d5-838b-1d1660cf13e1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC Part" "C424659"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1c77a790-9d0b-4026-a05b-d21090631586")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -4.15 -1)
+		(end -4.15 0.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "8ee8c948-cd38-4602-98d3-93d423c8dd8c")
+	)
+	(fp_line
+		(start -3.3 -2.2)
+		(end 3.3 -2.2)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "84e327f6-e21a-4a7c-8eef-28db4217de03")
+	)
+	(fp_line
+		(start 4.15 -1)
+		(end 4.15 0.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2db4b64c-2555-4e01-9965-ba2b999a6c2d")
+	)
+	(fp_circle
+		(center 2.75 -2.55)
+		(end 2.85 -2.55)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(fill yes)
+		(layer "F.SilkS")
+		(uuid "083303b2-75af-4003-8463-b4733b932cef")
+	)
+	(fp_rect
+		(start -4.25 -2.3)
+		(end 4.25 2.05)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e65df824-abb6-482f-9e94-d1b65765b6e1")
+	)
+	(fp_line
+		(start 2.25 -2.05)
+		(end 2.75 -1.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "334a5e68-5aad-4033-b262-2ec0349ab7f9")
+	)
+	(fp_line
+		(start 2.75 -2.05)
+		(end 3.25 -1.55)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "907c405a-da0f-43d7-9533-317fb0277d92")
+	)
+	(fp_rect
+		(start -4 -2.05)
+		(end 4 1.8)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "66c048f6-3f3b-4826-a010-b731c2c892de")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "07658b9e-b55d-4ffa-9ff9-5b0aa4117898")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.09)
+			)
+		)
+	)
+	(fp_text user "FPC in"
+		(at 0 1.1 0)
+		(layer "F.Fab")
+		(uuid "d4cce59e-aded-41c4-9804-8fa2748b96a0")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.075)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 2.75 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "60451dae-aec1-4421-b63f-3271cbbe25d1")
+	)
+	(pad "2" smd rect
+		(at 2.25 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "cfe2cd77-5235-458f-bbbf-8354d493b837")
+	)
+	(pad "3" smd rect
+		(at 1.75 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "06ca8da3-8475-48ea-b7dc-6704c871dbca")
+	)
+	(pad "4" smd rect
+		(at 1.25 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "0571fc73-9bb2-4443-adfa-c9219f3ba460")
+	)
+	(pad "5" smd rect
+		(at 0.75 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "65939a80-5b42-4531-b07b-ccc685e99491")
+	)
+	(pad "6" smd rect
+		(at 0.25 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d4926b18-02b9-4be9-83ac-0dddbc2845a3")
+	)
+	(pad "7" smd rect
+		(at -0.25 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ddfb18b0-938c-4e4a-b9e3-19ae3da2f4c2")
+	)
+	(pad "8" smd rect
+		(at -0.75 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "bc925068-dd9d-4474-8d5b-2cff54d0cf77")
+	)
+	(pad "9" smd rect
+		(at -1.25 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "13df9166-22ad-4bb5-8e92-497eb1e97d3e")
+	)
+	(pad "10" smd rect
+		(at -1.75 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "72e9f1d8-0ee2-4474-9efa-c9fade347bdd")
+	)
+	(pad "11" smd rect
+		(at -2.25 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a25e0d72-62c0-4509-a872-e216a16c93bf")
+	)
+	(pad "12" smd rect
+		(at -2.75 -1.25)
+		(size 0.3 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "36f43cce-aac1-4c6c-a271-d68014d4d4d0")
+	)
+	(pad "13" smd rect
+		(at -3.75 1.25)
+		(size 0.4 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "21e69157-5a49-4a59-b89f-2c126fd49bf5")
+	)
+	(pad "14" smd rect
+		(at 3.75 1.25)
+		(size 0.4 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "4d515e01-6f89-4c36-934e-dd08925c14c6")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../lib/odock.3dshapes/FFC-SMD_12P-P0.50_FH34SRJ-12S-0.5SH.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

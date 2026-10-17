@@ -1,6 +1,6 @@
-# odeck-10: front block layout notes (card reader + USB-A)
+# odock-10: front block layout notes (card reader + USB-A)
 
-Script: `hardware/odeck-10/layout/front.py`. It owns 70 refs:
+Script: `hardware/odock-10/layout/front.py`. It owns 70 refs:
 - Card reader: C901–C920, D901, J901, J902, R901–R907, U901, Y901.
 - USB-A: C701–C716, D701–D704, J701, J702, R701–R710, U701–U706.
 

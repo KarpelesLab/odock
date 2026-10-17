@@ -8,7 +8,7 @@
 
 Run with KiCad's bundled Python:
   /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3 \
-      tools/pcbsync.py hardware/odeck-10
+      tools/pcbsync.py hardware/odock-10
 """
 import os, sys, re, subprocess, tempfile, importlib.util
 import pcbnew
@@ -53,8 +53,8 @@ KICAD_FP = "/Applications/KiCad/KiCad.app/Contents/SharedSupport/footprints"
 
 
 def lib_path(project_dir, nick):
-    if nick == "odeck":
-        return os.path.join(project_dir, "..", "lib", "odeck.pretty")
+    if nick == "odock":
+        return os.path.join(project_dir, "..", "lib", "odock.pretty")
     return os.path.join(KICAD_FP, f"{nick}.pretty")
 
 
@@ -148,7 +148,7 @@ def sync(project_dir, placer=None, refresh=()):
 
 if __name__ == "__main__":
     args = [a for i, a in enumerate(sys.argv[1:], 1) if not a.startswith("--") and sys.argv[i - 1] != "--refresh"]
-    pd = os.path.abspath(args[0] if args else os.path.join(HERE, "..", "hardware", "odeck-10"))
+    pd = os.path.abspath(args[0] if args else os.path.join(HERE, "..", "hardware", "odock-10"))
     placer = None
     hook = os.path.join(pd, "placement.py")
     if os.path.exists(hook):

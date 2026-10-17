@@ -1,9 +1,9 @@
 # Routing notes: hub downstream links, Ethernet MDI, SD / microSD (hs_hub)
 
 Scripts:
-- `hardware/odeck-10/routing/d_hs_hub.py`: hub ports P1 (card reader), P2 (USB-A 1), P3 (USB-A 2), P4 (Ethernet), P6 (RP2350), and the hub crystal.
-- `hardware/odeck-10/routing/e_hs_eth_sd.py`: Ethernet MDI, PHY crystal, SD slot 1 and microSD slot 2.
-- `hardware/odeck-10/routing/_hs_lib.py`: shared helpers (pair offsetting, length tuning). The leading `_` keeps
+- `hardware/odock-10/routing/d_hs_hub.py`: hub ports P1 (card reader), P2 (USB-A 1), P3 (USB-A 2), P4 (Ethernet), P6 (RP2350), and the hub crystal.
+- `hardware/odock-10/routing/e_hs_eth_sd.py`: Ethernet MDI, PHY crystal, SD slot 1 and microSD slot 2.
+- `hardware/odock-10/routing/_hs_lib.py`: shared helpers (pair offsetting, length tuning). The leading `_` keeps
   `apply_routing.py` from running it as a script.
 
 Neither script owns any zones. Both print their length table and warnings when applied.

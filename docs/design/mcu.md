@@ -1,6 +1,6 @@
-# odeck-10 — MCU sheet (`mcu.kicad_sch`, refs 1000+)
+# odock-10 — MCU sheet (`mcu.kicad_sch`, refs 1000+)
 
-Source: `hardware/odeck-10/sheets/mcu.py` (generated, netlist-verified). References:
+Source: `hardware/odock-10/sheets/mcu.py` (generated, netlist-verified). References:
 - RP2350 datasheet (build 2026, "DS"): pin table 14.8.2, abs max 14.9.1, GPIO functions 9.4.
 - Raspberry Pi *Hardware design with RP2350* release 3 (2026-08-20), "minimal design" R4-S1 ("HWD").
 
@@ -225,7 +225,7 @@ whose firmware must obey the rule. "Source" is where the rule comes from; that d
 | I6 | Card detect is read from TCA9534 P3/P4 (no pulls to configure). CR_LED and ETH_LEDx are inputs only. | card_reader, mcu |
 | I7 | Read CHIP_ID.REVISION at boot and log it. On A2 silicon (erratum E9), drive pull-down-dependent outputs (FORCE_EN, HUB_SMB_PU, LCD_BL_PWM, LCD_RST_N, LCD_CS_N) *low* before releasing them or rebooting; do not rely on the pad pull-down. | mcu_ui review #13, data review #4 |
 | I8 | If DP alt-mode entry fails, the RP2350 (hub port 6) presents the USB Billboard class. | pd_mux review #10 |
-| I9 | Update flow: compare bundled image versions (PMG1, TPS26750 EEPROM, hub config) at boot and reflash as needed, observing M1 for the PMG1. TPS26750 EEPROM programming needs the TPS26750 pass-through host commands (to be confirmed). | odeck-10.md, power_input open issue 3 |
+| I9 | Update flow: compare bundled image versions (PMG1, TPS26750 EEPROM, hub config) at boot and reflash as needed, observing M1 for the PMG1. TPS26750 EEPROM programming needs the TPS26750 pass-through host commands (to be confirmed). | odock-10.md, power_input open issue 3 |
 
 ### PMG1 firmware (for reference; the RP2350 firmware depends on it)
 | # | Rule | Source |
@@ -241,7 +241,7 @@ whose firmware must obey the rule. "Source" is where the rule comes from; that d
 | P9 | PDO caps by input: 140 W only with VIN ≥ 16 V; a 12 V barrel is limited to ≤ 100 W including the 5 V rail; keep the LM51770 input current below the ~10.6 A peak hiccup limit. | power_laptop, power review #17 |
 | P10 | **Downstream port 1: advertise 3 A only with external power**, default/1.5 A when bus-powered. Configure port 1 as an Rp source as early as possible in boot. Never turn on a sink path on port 1. Forced 5 V (on RP2350 request) turns off below ~25 mA for 5 min. | pd_pmg1, pd_mux reviews #7 and #11 |
 | P11 | *(pending, power review #15)* If VBB_PG drops during VSEL down-steps on the bench, blank it in firmware during steps. | power review #15 |
-| P12 | Bus-powered ↔ external-power transitions: PR_Swap or a brief detach (odeck-10.md open question 2). | pd_pmg1 |
+| P12 | Bus-powered ↔ external-power transitions: PR_Swap or a brief detach (odock-10.md open question 2). | pd_pmg1 |
 
 ## Part list (this sheet)
 

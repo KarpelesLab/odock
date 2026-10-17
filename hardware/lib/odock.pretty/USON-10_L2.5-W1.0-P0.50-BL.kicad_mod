@@ -1,0 +1,190 @@
+(footprint "USON-10_L2.5-W1.0-P0.50-BL"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "TI DQA0010A USON-10 2.5x1.0mm P0.5mm; per TPD4E02B04 datasheet Example Board Layout (row pitch 0.835, pads 0.565x0.2, GND pads 3/8 0.565x0.4)")
+	(property "Reference" "REF**"
+		(at 0 -4.4 0)
+		(layer "F.SilkS")
+		(uuid "4dc2f26d-8b6d-497b-9511-3fc4d7b9fd27")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "USON-10_L2.5-W1.0-P0.50-BL"
+		(at 0 4.4 0)
+		(layer "F.Fab")
+		(uuid "e01d13e4-a64a-4de3-8ffc-bfb7553793e5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "40aa7db6-9cb0-4496-af2d-8b1c3fea9a0b")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7b8f1a63-6647-42cd-b4cf-d934e3aa588e")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "LCSC Part" "C106794"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cc9c7b27-caf8-456f-94bd-c82e4d19b98a")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr smd)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_line
+		(start -1.33 0.58)
+		(end -1.33 -0.58)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c57ffa38-59ac-4e9e-84d1-2a39573a722a")
+	)
+	(fp_line
+		(start 1.33 -0.58)
+		(end 1.33 0.58)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f765dc22-d92b-4d1d-ae1b-79844dad88c3")
+	)
+	(fp_circle
+		(center -1 1.02)
+		(end -0.9 1.02)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.SilkS")
+		(uuid "58a22694-c6f7-492b-a164-69c375ab24ae")
+	)
+	(fp_circle
+		(center -1 0.9)
+		(end -0.9 0.9)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(fill no)
+		(layer "Cmts.User")
+		(uuid "bda48895-7c6b-4bae-a64f-cbd6f37bb31b")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "37ab682b-0201-459e-b5ca-fb279e189f53")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -1 0.4175)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "e3dc6f90-7495-40d8-8c7c-8a6614ea92dd")
+	)
+	(pad "2" smd rect
+		(at -0.5 0.4175)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "86735611-4a1a-4355-9434-842562ad7df7")
+	)
+	(pad "3" smd rect
+		(at 0 0.4175)
+		(size 0.4 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ed71afc4-8cef-4d96-9598-ebc11db8a784")
+	)
+	(pad "4" smd rect
+		(at 0.5 0.4175)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c7e7a70c-cc36-4fec-8d9c-f6ff5894ecc9")
+	)
+	(pad "5" smd rect
+		(at 1 0.4175)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d9e490d7-ac99-49a8-8409-e4a128e841c1")
+	)
+	(pad "6" smd rect
+		(at 1 -0.4175)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6a8ebc12-9d40-494b-9ac9-27c2b2347dbe")
+	)
+	(pad "7" smd rect
+		(at 0.5 -0.4175)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "c6c99efa-476d-4297-aeda-ef0f129e6194")
+	)
+	(pad "8" smd rect
+		(at 0 -0.4175)
+		(size 0.4 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "d30ac769-fedb-451f-8100-c8dbd9b8ec4a")
+	)
+	(pad "9" smd rect
+		(at -0.5 -0.4175)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6c7d83d1-46c6-43d1-9a97-af00eea4356e")
+	)
+	(pad "10" smd rect
+		(at -1 -0.4175)
+		(size 0.2 0.565)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8a261b94-d61d-49ba-be0a-3952e8a4a189")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../lib/odock.3dshapes/USON-10_L2.5-W1.0-H0.6-P0.50.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 270)
+		)
+	)
+	(fp_rect (start -1.53 -0.95) (end 1.53 0.95) (stroke (width 0.05) (type solid)) (fill no) (layer "F.CrtYd") (uuid "3f135b6f-4e44-408e-ad73-38f9ce25c5dc"))
+)

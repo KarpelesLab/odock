@@ -1,4 +1,4 @@
-# odeck-10 — Power budget
+# odock-10 — Power budget
 
 Draft estimates (2026-10-02) from datasheet typicals/maxima and research notes; to be replaced by
 measurements from the prototype's instrumentation (INA226/INA228 + TMP1075 probes).

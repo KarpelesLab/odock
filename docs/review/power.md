@@ -3,11 +3,11 @@
 Reviewer: independent pre-layout review, 2026-10-02.
 
 Scope:
-- `hardware/odeck-10/sheets/power_input.py`, `power_laptop.py` and `power_rails.py`. The pin→net maps in these files
+- `hardware/odock-10/sheets/power_input.py`, `power_laptop.py` and `power_rails.py`. The pin→net maps in these files
   were treated as the schematic.
 - The cross-sheet nets they share with `pd_pmg1.py`, `usbc_muxes.py`, `mcu.py`, `usb_hub.py` and `tools/schgen/nets.py`.
-- Every symbol pin number was checked against `hardware/lib/odeck.kicad_sym` and against the datasheet pin table.
-- Pad numbering of the power MOSFET footprints, in particular the exposed drain pads, was checked in `odeck.pretty`.
+- Every symbol pin number was checked against `hardware/lib/odock.kicad_sym` and against the datasheet pin table.
+- Pad numbering of the power MOSFET footprints, in particular the exposed drain pads, was checked in `odock.pretty`.
 
 Datasheets read:
 
@@ -72,7 +72,7 @@ The MINOR items and NOTES follow.
 | 15 | NOTE | power_laptop | U201 MODE = GND (PSM), VBB_PG during VSEL down-steps | The design relies on "OVP1 masked in PSM" so that nFLT/VBB_PG does not drop when VBB_OUT lags a down-step with FB > 110 %. The datasheet sentence is ambiguous: it could mean PSM *operation* (pulse skipping) rather than MODE = low. If nFLT does assert, SRC_ON opens during every 28→20/15/9/5 V step. | SNVSCL2A §8.3.15 p.37. | Bench-verify a 28→5 V step with the laptop at standby load. Fallback: blank VBB_PG in firmware during steps, which needs SRC_ON to drop VBB_PG from the AND, or use FPWM (DNP 0 Ω). |
 | 16 | NOTE | power_laptop / pd_pmg1 | VBUS_LAPTOP limit chain | The PMG1 VBUS_C_P0 *operating* range is 3.67–30 V; abs max is 34 V. The OVP (≤ 32.0 V) and the LM74800 backstop (≤ 33.6 V) sit between operating and abs max, which is acceptable as a fault-only limit. The SMBJ30A on usbc_muxes clamps far higher at rated Ipp. | PMG1 DS SID.PD.PWR#3, SID.PD.PWR.ABS#3. | None for the prototype. Keep the backstop below 34 V worst case (it is). |
 | 17 | NOTE | power_laptop | U201 CFG 6.49 k (row 8: hiccup ON + ISNS limiter) | With hiccup enabled, reaching the peak or average current limit hiccups (1 ms on / 24 ms off) rather than limiting. power_laptop.md says a 12 V input "delivers ~100–130 W"; in practice it would hiccup and the laptop would lose VBUS. PMG1 policy must keep the input current under about 10.6 A peak. | SNVSCL2A §8.3.13 p.34, Table 8-1 p.38. | Correct the doc. PMG1 must cap the laptop offer by input voltage (12 V barrel → ≤ 100 W incl. 5 V rail). |
-| 18 | NOTE | all | docs | Stale or inconsistent documentation: <br>• power_input.md §6 gives the INA237 CURRENT_LSB as 2¹⁹ / 39 µA with the INA228 constant 13107.2·10⁶. INA237 is 16-bit, so LSB = 625 µA and SHUNT_CAL = 819.2·10⁶·LSB·R·4 = 4096. The sheet note is correct. <br>• power_rails.md still lists "INA228 on VIN" and calls `RAILS_PG` a local, unconnected net. It is global in nets.py and used by usb_hub. <br>• power_rails.md part list gives U304 as TPS62933DRLR / C3200405, but the sheet uses TPS62933F (C5219272); keep the F variant. <br>• odeck-10.md still shows LM74720 on the barrel. | INA237 SBOSA20 Eq. 1 (p.~27). | Update the docs so firmware and BOM follow the sheets. |
+| 18 | NOTE | all | docs | Stale or inconsistent documentation: <br>• power_input.md §6 gives the INA237 CURRENT_LSB as 2¹⁹ / 39 µA with the INA228 constant 13107.2·10⁶. INA237 is 16-bit, so LSB = 625 µA and SHUNT_CAL = 819.2·10⁶·LSB·R·4 = 4096. The sheet note is correct. <br>• power_rails.md still lists "INA228 on VIN" and calls `RAILS_PG` a local, unconnected net. It is global in nets.py and used by usb_hub. <br>• power_rails.md part list gives U304 as TPS62933DRLR / C3200405, but the sheet uses TPS62933F (C5219272); keep the F variant. <br>• odock-10.md still shows LM74720 on the barrel. | INA237 SBOSA20 Eq. 1 (p.~27). | Update the docs so firmware and BOM follow the sheets. |
 | 19 | NOTE | power_input | C122/C123 RVT 100 µF/80 V (EasyEDA footprint) | Symbol pin 1 = VIN, pin 2 = GND. Confirm that pad 1 of `CAP-SMD_BD10.0-…` is the + pad (chamfer side) before layout. If finding 4 removes these caps, this is moot. | — | Check the footprint silk and polarity. |
 
 ## What was verified and found correct
@@ -196,5 +196,5 @@ All three sheets rebuilt with `build_all.py power_input power_laptop power_rails
 | 15 | Docs: bench-verification item added to power_laptop.md risks. |
 | 16 | No action, as suggested. |
 | 17 | Docs corrected: a 12 V input hiccups and does not deliver 100–130 W. PMG1 caps the offer by input voltage (12 V → ≤ 100 W incl. the 5 V rail). |
-| 18 | Docs corrected: the INA237 LSB (625 µA, SHUNT_CAL 4096) in power_input.md; power_rails.md now lists the INA237 at 0x45 and the INA226 at 0x44, `RAILS_PG` as global, and U304 as TPS62933F C5219272; odeck-10.md now shows LM74800 ×2 with no priority. The `nets.py` comment on `PDIN_PRESENT` ("disables barrel path") is stale but owned elsewhere; flagged in power_input.md. |
+| 18 | Docs corrected: the INA237 LSB (625 µA, SHUNT_CAL 4096) in power_input.md; power_rails.md now lists the INA237 at 0x45 and the INA226 at 0x44, `RAILS_PG` as global, and U304 as TPS62933F C5219272; odock-10.md now shows LM74800 ×2 with no priority. The `nets.py` comment on `PDIN_PRESENT` ("disables barrel path") is stale but owned elsewhere; flagged in power_input.md. |
 | 19 | Moot: the RVT 100 µF parts were removed. The remaining 47 µF alu uses KiCad's CP_Elec_10x10, which has a marked + pad. |

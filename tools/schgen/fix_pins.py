@@ -1,9 +1,9 @@
-"""Set electrical pin types on a symbol in hardware/lib/odeck.kicad_sym (easyeda2kicad imports all pins as
+"""Set electrical pin types on a symbol in hardware/lib/odock.kicad_sym (easyeda2kicad imports all pins as
 'unspecified').  usage (python):  fix_pins("TMP1075DSGR", {"V+": "power_in", "GND": "power_in", "SDA": "bidirectional"})
 Keys are pin names or numbers; values are KiCad pin types: input output bidirectional tri_state passive free
 unspecified power_in power_out open_collector open_emitter no_connect.  Unlisted pins keep their type."""
 import re, os, time, contextlib
-LIB = os.path.join(os.path.dirname(__file__), "..", "..", "hardware/lib/odeck.kicad_sym")
+LIB = os.path.join(os.path.dirname(__file__), "..", "..", "hardware/lib/odock.kicad_sym")
 
 @contextlib.contextmanager
 def lib_lock(lib=LIB):

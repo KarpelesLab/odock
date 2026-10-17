@@ -5,7 +5,7 @@ Each hardware/<proj>/layout/<block>.py defines  place(board, h)  that positions 
 out-of-region check is printed. Run with KiCad's bundled Python:
 
   /Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/3.9/bin/python3 \
-      tools/apply_layout.py hardware/odeck-10 [--only block1,block2] [--out other.kicad_pcb]
+      tools/apply_layout.py hardware/odock-10 [--only block1,block2] [--out other.kicad_pcb]
 """
 import os, sys, glob, importlib.util, argparse, math
 import pcbnew

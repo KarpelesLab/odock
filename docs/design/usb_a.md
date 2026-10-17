@@ -1,6 +1,6 @@
-# odeck-10 — USB-A sheet (`usb_a.kicad_sch`, ref 700)
+# odock-10 — USB-A sheet (`usb_a.kicad_sch`, ref 700)
 
-Source: `hardware/odeck-10/sheets/usb_a.py`. Two USB 3.2 Gen2 (10 Gbps) Type-A ports on USB7206C hub ports 2 and 3.
+Source: `hardware/odock-10/sheets/usb_a.py`. Two USB 3.2 Gen2 (10 Gbps) Type-A ports on USB7206C hub ports 2 and 3.
 Each port has a current-limited VBUS switch that the hub or the RP2350 can turn on, a current-sense amplifier, ESD
 protection and VBUS bulk capacitance.
 
@@ -25,7 +25,7 @@ hub USB2 ─────────────────── USBAx_DP/DN �
 ### Connector
 - **Amphenol GSB4111312HR** (C5429382, 3846 in stock). It is Amphenol's USB 3.1 Gen 2 Type-A family (GSB4), right-angle
   THT. No better-documented in-stock Gen2 Type-A was found (research note: the GSB311/Molex 48406 parts are 5 Gbps only).
-- Shell/EH tabs and GND_DRAIN go straight to GND. odeck-10 has no chassis, which matches the usbc_muxes convention.
+- Shell/EH tabs and GND_DRAIN go straight to GND. odock-10 has no chassis, which matches the usbc_muxes convention.
 
 ### Pair naming and AC coupling
 - In the Standard-A receptacle pin names (USB 3.2 §5.3), StdA_SSTX (pins 9/8) means the host transmits and StdA_SSRX

@@ -1,6 +1,6 @@
-# odeck-10 routing, phase g: front region (`g_front.py`)
+# odock-10 routing, phase g: front region (`g_front.py`)
 
-Script: `hardware/odeck-10/routing/g_front.py`.
+Script: `hardware/odock-10/routing/g_front.py`.
 - `NETS = []` and `GROUPED = True`. Everything it draws lives in group `route:g_front`, and only that group is
   replaced on re-run.
 - Region: `layout/front.py` `REGION`. That is the card-reader column, the USB-A block and the microSD corner.
@@ -10,7 +10,7 @@ Script: `hardware/odeck-10/routing/g_front.py`.
 Full pipeline, run on a scratch copy:
 
 ```
-apply_routing.py <scratch>/odeck-10 --only a_planes,b_power,c_hs_usbc,d_hs_hub,e_hs_eth_sd,f_fanout,g_front,z_stitch --drc
+apply_routing.py <scratch>/odock-10 --only a_planes,b_power,c_hs_usbc,d_hs_hub,e_hs_eth_sd,f_fanout,g_front,z_stitch --drc
 ```
 
 - **0 DRC errors** anywhere on the board. That covers clearance, short, hole, width, edge and mask. Only

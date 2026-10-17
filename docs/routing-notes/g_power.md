@@ -1,12 +1,12 @@
-# odeck-10 routing notes: g_power (power region, phase g)
+# odock-10 routing notes: g_power (power region, phase g)
 
-Script: `hardware/odeck-10/routing/g_power.py`. It has `NETS = []` and `GROUPED = True`, so everything it draws goes
+Script: `hardware/odock-10/routing/g_power.py`. It has `NETS = []` and `GROUPED = True`, so everything it draws goes
 into the group `route:g_power`, and only that group is replaced when the script runs again.
 Region: (100,50)–(138,108) plus the J101/J102 strip. All copper stays inside x 100.3–138.3, y 50.3–108.3.
 Run time: about 6–9 min (pure-Python router).
 
 Check command:
-`apply_routing.py <scratch>/odeck-10 --only a_planes,b_power,c_hs_usbc,d_hs_hub,e_hs_eth_sd,f_fanout,g_power,z_stitch --drc`
+`apply_routing.py <scratch>/odock-10 --only a_planes,b_power,c_hs_usbc,d_hs_hub,e_hs_eth_sd,f_fanout,g_power,z_stitch --drc`
 gives **0 DRC errors**. The only items left are unconnected items. Before routing, I counted the connectivity of
 every net on the a–f board. After routing, **no net has more clusters than before**: no pour was cut off and no
 connection was broken.
