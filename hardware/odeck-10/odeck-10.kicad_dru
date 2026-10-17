@@ -15,10 +15,15 @@
 # follows the manufacturer's land pattern, and so do tracks entering the 0.5 mm-pitch pins of the HV-rated
 # controllers/FETs/connectors (U10x, U20x, Q20x, J101, J501) and anything inside U201's courtyard.
 (rule "high voltage"
-  (condition "A.NetClass == 'HV' && B.NetClass != 'HV' && !(A.Type == 'Pad' && B.Type == 'Pad') && !((A.Type == 'Pad' && (A.memberOfFootprint('U10*') || A.memberOfFootprint('U20*') || A.memberOfFootprint('Q20*') || A.memberOfFootprint('J101') || A.memberOfFootprint('J501'))) || (B.Type == 'Pad' && (B.memberOfFootprint('U10*') || B.memberOfFootprint('U20*') || B.memberOfFootprint('Q20*') || B.memberOfFootprint('J101') || B.memberOfFootprint('J501'))) || (A.intersectsCourtyard('U201') && B.intersectsCourtyard('U201')))")
+  (condition "A.NetClass == 'HV' && B.NetClass != 'HV' && !(A.Type == 'Pad' && B.Type == 'Pad') && !((A.Type == 'Pad' && (A.memberOfFootprint('U10*') || A.memberOfFootprint('U20*') || A.memberOfFootprint('Q20*') || A.memberOfFootprint('J101') || A.memberOfFootprint('J501') || A.memberOfFootprint('U401'))) || (B.Type == 'Pad' && (B.memberOfFootprint('U10*') || B.memberOfFootprint('U20*') || B.memberOfFootprint('Q20*') || B.memberOfFootprint('J101') || B.memberOfFootprint('J501') || B.memberOfFootprint('U401'))) || (A.intersectsCourtyard('U201') && B.intersectsCourtyard('U201')))")
   (constraint clearance (min 0.3mm)))
 
 # SKRTLAE010 side-push button: manufacturer land pattern puts its locating NPTH close to the GND tabs
 (rule "button footprint holes"
   (condition "A.memberOfFootprint('SW110*') && B.memberOfFootprint('SW110*')")
   (constraint hole_clearance (min 0mm)))
+
+# Via-in-pad on the 0.4 mm-pitch USB-C muxes/protectors (JLC 6L minimum clearance is 0.09 mm)
+(rule "via in pad"
+  (condition "A.Type == 'Via' && B.Type == 'Pad' && (B.memberOfFootprint('U501') || B.memberOfFootprint('U502') || B.memberOfFootprint('U503') || B.memberOfFootprint('U504'))")
+  (constraint clearance (min 0.12mm)))
